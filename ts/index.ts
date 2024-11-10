@@ -33,7 +33,7 @@ class Socket {
             console.log(error);
             alert("Server error!");
         }
-        if (typeof action.action == "string" && this.actions[action.action]) {
+        if (action && typeof action.action == "string" && this.actions[action.action]) {
             this.actions[action.action](this, action.body);
         }
         if (typeof get == "string" || typeof get == "number") {
